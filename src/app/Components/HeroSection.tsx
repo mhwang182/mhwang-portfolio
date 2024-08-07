@@ -3,17 +3,6 @@ import CommonButton from "./CommonButton"
 import SectionContainer from "./SectionContainer"
 
 const HeroSection = () => {
-
-    const HeroButton = (props: { text: string, icon?: JSX.Element }) => {
-        return (
-            <button className="text-2xl bg-sky-600 rounded-sm px-12 py-3 text-white font-semibold shadow-sm">
-                <div className="flex items-center space-x-2">
-                    <span>{props.icon}</span>
-                    <span>{props.text}</span>
-                </div>
-            </button>
-        )
-    }
     return (
         <SectionContainer>
             <div className="size-full bg-[url('../../public/cityBackground.jpeg')] flex flex-col justify-center items-center space-y-10 px-3">
