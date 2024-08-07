@@ -1,6 +1,7 @@
 import HeroSection from "./Components/HeroSection";
 import AboutMeSection from "./Components/AboutMeSection";
 import ProjectsSection from "./Components/ProjectsSection";
+import ContactSection from "./Components/ContactSection";
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <AboutMeSection />
       <ProjectsSection />
+      <ContactSection />
     </main>
   );
 }

@@ -3,7 +3,9 @@ import BodySectionContainer from "./BodySectionContainter"
 import SectionTitle from "./SectionTitle"
 import { MongoDBIcon, PythonIcon, ReactIcon } from "../Icons/Icons"
 import OzempicResultsImage from "../../../public/OzempicResultsImage.png";
-import Image from 'next/image'
+import WorkInProgressImage from "../../../public/WorkInProgressImage.jpeg";
+import PortfolioSiteImage from "../../../public/PortfolioSiteImage.png";
+import Image, { StaticImageData } from 'next/image'
 
 const ProjectSection = () => {
 
@@ -26,21 +28,24 @@ const ProjectSection = () => {
 
     const ProjectDescription = (props: {
         name: string,
+        image: StaticImageData,
         toolsList: { name: string, icon?: ReactElement }[],
         description: string,
+        repoLink?: string,
+        demoLink?: string
     }) => {
         return (
-            <div className="flex gap-10 md:flex-row flex-col">
-                <div className="w-full md:max-w-96 h-fit">
+            <div className="flex gap-10 md:flex-row flex-col w-full">
+                <div className="md:w-96 h-fit border border-gray-300 shadow-lg rounded-md overflow-hidden">
                     <Image
-                        src={OzempicResultsImage}
+                        src={props.image}
                         alt={""}
                         height={0}
                         width={0}
                         style={{ width: '100%', height: '100%' }}
                     />
                 </div>
-                <div className="flex flex-col md:max-w-96 space-y-4 items-center md:items-start">
+                <div className="flex flex-col space-y-4 items-center md:items-start w-full md:max-w-96">
                     <span className="text-3xl font-bold">{props.name}</span>
                     <div>
                         {props.toolsList.length > 0 && <>
@@ -53,8 +58,8 @@ const ProjectSection = () => {
                     </div>
                     <span>{props.description}</span>
                     <div className="flex space-x-2">
-                        <ProjectButton text="Demo" />
-                        <ProjectButton text="Github Link" />
+                        {props.demoLink && <ProjectButton text="Demo" />}
+                        {props.repoLink && <ProjectButton text="Github Link" />}
                     </div>
                 </div>
             </div>
@@ -64,22 +69,40 @@ const ProjectSection = () => {
         <BodySectionContainer>
             <div className="size-full flex flex-col space-y-10 py-10 px-4 items-center">
                 <SectionTitle title="Projects" />
-                <ProjectDescription
-                    name={"OzempicResults.com"}
-                    toolsList={[
-                        { name: "React", icon: <ReactIcon /> },
-                        { name: "Flask", icon: <PythonIcon /> },
-                        { name: "MongoDB", icon: <MongoDBIcon /> }
-                    ]}
-                    description="OzempicResults.com is a Fullstack web app built using React and Flask, that users can
-                        find weighloss results achieved using medications like Ozempic."
-                />
-                <ProjectDescription
-                    name={"OzempicResults.com"}
-                    toolsList={[]}
-                    description="OzempicResults.com is a Fullstack web app built using React and Flask, that users can
-                        find weighloss results achieved using medications like Ozempic."
-                />
+                <div className="flex flex-col space-y-10 items-center">
+                    <ProjectDescription
+                        name={"OzempicResults.com"}
+                        image={OzempicResultsImage}
+                        toolsList={[
+                            { name: "React", icon: <ReactIcon /> },
+                            { name: "Flask", icon: <PythonIcon /> },
+                            { name: "MongoDB", icon: <MongoDBIcon /> }
+                        ]}
+                        description="OzempicResults.com is a Fullstack web app built using React and Flask, that users can
+                            find weighloss results achieved using medications like Ozempic."
+                        repoLink="test"
+                        demoLink="test"
+                    />
+                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                    <ProjectDescription
+                        name={"Portfolio Website"}
+                        image={PortfolioSiteImage}
+                        toolsList={[
+                            { name: "React", icon: <ReactIcon /> }
+                        ]}
+                        description="My humble portfolio website :)"
+                        repoLink="test"
+                        demoLink="test"
+                    />
+                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                    <ProjectDescription
+                        name={"AWS Focused Application (WIP)"}
+                        image={WorkInProgressImage}
+                        toolsList={[]}
+                        description="App focused on helping aws learners and professionals obtain clarity for their goals"
+                    />
+                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                </div>
             </div>
         </BodySectionContainer>
     )

@@ -36,26 +36,27 @@ const AboutMeSection = () => {
     }
     return (
         <BodySection>
-            <div className="size-full flex flex-col items-center space-y-4 bg-zinc-50 py-10 px-4">
-                <SectionTitle
-                    title="About Me"
-                    description="Get to know me! Here is a little about my background and what skills I have to offer"
-                />
-                <div className="max-w-[700px] flex flex-col space-y-5">
-                    <span className="">
+            <div className="size-full flex flex-col items-center space-y-10 bg-zinc-50 py-10 px-4">
+                <div className="flex flex-col space-y-8 mx-auto max-w-[1000px]">
+                    <span className="text-5xl font-bold underline decoration-sky-600">{"About Me"}</span>
+                    <span className="text-lg">
                         I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
                         I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming
                         I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                     </span>
-                    <div className="w-fit mx-auto">
+                    <div className="w-fit">
                         <CommonButton text="Contact" />
                     </div>
+                </div>
+                <div className="w-full max-w-[800px] rounded-full h-1 bg-sky-600 shadow-md" />
+                <div className="w-full max-w-[1000px]">
+                    <span className="text-xl font-semibold">My Background:</span>
+                    <div className="flex w-full flex-wrap gap-y-4 gap-x-4 justify-center mt-5">
+                        <SkillsSection />
+                        <ExperienceSection />
+                    </div>
+                </div>
 
-                </div>
-                <div className="flex w-full flex-wrap gap-y-4 gap-x-4 justify-center">
-                    <SkillsSection />
-                    <ExperienceSection />
-                </div>
 
             </div>
         </BodySection>

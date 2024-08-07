@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import NavBar from "./Components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const libre_franklin = Libre_Franklin({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${libre_franklin.className} tracking-wider`}>
         <NavBar />
         {children}
       </body>
