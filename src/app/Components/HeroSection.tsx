@@ -1,4 +1,5 @@
 import { GithubIcon } from "../Icons/Icons"
+import CommonButton from "./CommonButton"
 import SectionContainer from "./SectionContainer"
 
 const HeroSection = () => {
@@ -22,8 +23,8 @@ const HeroSection = () => {
                     Web Applications that leads to the success of the overall product
                 </span>
                 <div className="flex space-x-5">
-                    <HeroButton text="Projects" />
-                    <HeroButton text="Github" icon={GithubIcon()} />
+                    <CommonButton text="Projects" />
+                    <CommonButton text="Github" icon={GithubIcon()} />
                 </div>
             </div>
         </SectionContainer>
