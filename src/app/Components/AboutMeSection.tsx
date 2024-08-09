@@ -1,3 +1,4 @@
+import Link from "next/link"
 import BodySection from "./BodySectionContainter"
 import CommonButton from "./CommonButton"
 import ExperienceField from "./ExperienceField"
@@ -47,8 +48,9 @@ const AboutMeSection = () => {
                         I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming
                         I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                     </span>
-                    <div className="w-fit">
-                        <CommonButton text="Contact" />
+                    <div className="w-fit space-x-3">
+                        <CommonButton text="Contact" small />
+                        <Link href={"/gallery"}><CommonButton text="Check out my life :)" small /></Link>
                     </div>
                 </div>
                 <div className="w-full max-w-[800px] rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
