@@ -1,12 +1,13 @@
 import BodySectionContainer from "./BodySectionContainter"
+import CommonButton from "./CommonButton"
 
 const ContactSection = () => {
     return (
         <BodySectionContainer>
-            <div className="size-full pattern-dots pattern-blue-200 pattern-bg-white pattern-size-6 pattern-opacity-100 py-10 px-4">
+            <div className="size-full pattern-isometric pattern-gray-100 pattern-bg-white pattern-size-16 pattern-opacity-100 py-10 px-4">
                 <div className="w-full max-w-[1000px] mx-auto bg-opacity-100 flex flex-col items-center space-y-10">
                     <div className="w-full">
-                        <span className="font-bold text-5xl underline decoration-sky-600">Contact Me</span>
+                        <span className="font-bold text-5xl underline decoration-sky-600">Contact Me!</span>
                     </div>
                     <div className="
                         w-full max-w-[550px] h-fit p-5
@@ -31,6 +32,9 @@ const ContactSection = () => {
                             "
                                 placeholder="Enter Your Message"
                             ></textarea>
+                        </div>
+                        <div className="w-fit">
+                            <CommonButton small text="Submit" />
                         </div>
                     </div>
                 </div>

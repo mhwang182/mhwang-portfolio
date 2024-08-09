@@ -36,7 +36,10 @@ const AboutMeSection = () => {
     }
     return (
         <BodySection>
-            <div className="size-full flex flex-col items-center space-y-10 bg-zinc-50 py-10 px-4">
+            <div className="
+                size-full flex flex-col items-center space-y-10 bg-zinc-50 
+                py-10 px-4
+                ">
                 <div className="flex flex-col space-y-8 mx-auto max-w-[1000px]">
                     <span className="text-5xl font-bold underline decoration-sky-600">{"About Me"}</span>
                     <span className="text-lg">
@@ -48,7 +51,7 @@ const AboutMeSection = () => {
                         <CommonButton text="Contact" />
                     </div>
                 </div>
-                <div className="w-full max-w-[800px] rounded-full h-1 bg-sky-600 shadow-md" />
+                <div className="w-full max-w-[800px] rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
                 <div className="w-full max-w-[1000px]">
                     <span className="text-xl font-semibold">My Background:</span>
                     <div className="flex w-full flex-wrap gap-y-4 gap-x-4 justify-center mt-5">

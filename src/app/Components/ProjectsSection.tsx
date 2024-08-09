@@ -6,6 +6,7 @@ import OzempicResultsImage from "../../../public/OzempicResultsImage.png";
 import WorkInProgressImage from "../../../public/WorkInProgressImage.jpeg";
 import PortfolioSiteImage from "../../../public/PortfolioSiteImage.png";
 import Image, { StaticImageData } from 'next/image'
+import CommonButton from "./CommonButton";
 
 const ProjectSection = () => {
 
@@ -15,14 +16,6 @@ const ProjectSection = () => {
                 {props.icon}
                 <span>{props.name}</span>
             </div>
-        )
-    }
-
-    const ProjectButton = (props: { text: string }) => {
-        return (
-            <button className="px-5 py-2 bg-sky-600 rounded-md text-white font-semibold text-md shadow-md">
-                {props.text}
-            </button>
         )
     }
 
@@ -58,12 +51,16 @@ const ProjectSection = () => {
                     </div>
                     <span>{props.description}</span>
                     <div className="flex space-x-2">
-                        {props.demoLink && <ProjectButton text="Demo" />}
-                        {props.repoLink && <ProjectButton text="Github Link" />}
+                        {props.demoLink && <CommonButton small text="Demo" />}
+                        {props.repoLink && <CommonButton small text="Github Link" />}
                     </div>
                 </div>
             </div>
         )
+    }
+
+    const Divider = () => {
+        return <div className="w-32 rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
     }
     return (
         <BodySectionContainer>
@@ -83,7 +80,7 @@ const ProjectSection = () => {
                         repoLink="test"
                         demoLink="test"
                     />
-                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                    <Divider />
                     <ProjectDescription
                         name={"Portfolio Website"}
                         image={PortfolioSiteImage}
@@ -94,14 +91,14 @@ const ProjectSection = () => {
                         repoLink="test"
                         demoLink="test"
                     />
-                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                    <Divider />
                     <ProjectDescription
                         name={"AWS Focused Application (WIP)"}
                         image={WorkInProgressImage}
                         toolsList={[]}
                         description="App focused on helping aws learners and professionals obtain clarity for their goals"
                     />
-                    <div className="w-32 rounded-full h-1 bg-sky-600" />
+                    <Divider />
                 </div>
             </div>
         </BodySectionContainer>
