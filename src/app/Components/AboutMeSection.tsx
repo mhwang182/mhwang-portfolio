@@ -2,7 +2,10 @@ import Link from "next/link"
 import BodySection from "./BodySectionContainter"
 import CommonButton from "./CommonButton"
 import ExperienceField from "./ExperienceField"
-import SectionTitle from "./SectionTitle"
+import VTLogo from "../../../public/VTLogo.png";
+import FundriseLogo from "../../../public/FundriseLogo.png";
+import CostarLogo from "../../../public/CostarLogo.png";
+
 
 const AboutMeSection = () => {
 
@@ -11,12 +14,24 @@ const AboutMeSection = () => {
             <div className="flex flex-col justify-center sm:max-w-96 w-full space-y-4">
                 <div className="flex flex-col space-y-3 border border-gray-300 rounded-lg shadow-md p-4 bg-white">
                     <span className="font-bold text-2xl">Education: </span>
-                    <ExperienceField institution="Virginia Tech" details="Bachelors in Computer Science" />
+                    <ExperienceField
+                        institution="Virginia Tech"
+                        details="Bachelors in Computer Science"
+                        image={VTLogo}
+                    />
                 </div>
                 <div className="flex flex-col space-y-3 border border-gray-300 rounded-lg shadow-md p-4 bg-white">
                     <span className="font-bold text-2xl">Work Experience: </span>
-                    <ExperienceField institution="Fundrise" details="Software Engineer II (Dec 2021 - Aug 2023)" />
-                    <ExperienceField institution="Costar Group" details="Software Engineer (Aug 2020 - Dec 2021)" />
+                    <ExperienceField
+                        institution="Fundrise"
+                        details="Software Engineer II (Dec 2021 - Aug 2023)"
+                        image={FundriseLogo}
+                    />
+                    <ExperienceField
+                        institution="Costar Group"
+                        details="Software Engineer (Aug 2020 - Dec 2021)"
+                        image={CostarLogo}
+                    />
                 </div>
             </div>
         )
@@ -42,7 +57,7 @@ const AboutMeSection = () => {
                 py-10 px-4
                 ">
                 <div className="flex flex-col space-y-8 mx-auto max-w-[1000px]">
-                    <span className="text-5xl font-bold underline decoration-sky-600">{"About Me"}</span>
+                    <span className="text-5xl font-bold">{"About Me"}</span>
                     <span className="text-lg">
                         I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
                         I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming

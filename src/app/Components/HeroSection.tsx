@@ -34,7 +34,7 @@ const HeroSection = () => {
                     ">MATT HWANG!</span>
                 </div>
                 <span className="
-                    max-w-[500px]
+                    max-w-[600px]
                     text-gray-300 text-xl
                 ">
                     A Result-Oriented Web Developer building and managing Websites and
