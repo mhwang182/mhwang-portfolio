@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { HamburgerIcon } from "../Icons/Icons"
+import { HamburgerIcon, XMarkIcon } from "../Icons/Icons"
 import Link from "next/link";
 import headshot from "../../../public/headshot.png";
 import Image from 'next/image';
@@ -30,15 +30,19 @@ const NavBar = () => {
                     </Link>
                 </div>
 
-                <div className="sm:flex items-center space-x-10 hidden">
+                <div className="md:flex items-center space-x-8 hidden">
                     <span className="text-l hover:text-sky-600 cursor-pointer">HOME</span>
                     <span className="text-l hover:text-sky-600 cursor-pointer">ABOUT</span>
                     <span className="text-l hover:text-sky-600 cursor-pointer">PROJECTS</span>
                     <Link className="text-l hover:text-sky-600 cursor-pointer" href={"/resume"}>RESUME</Link>
                     <span className="text-l hover:text-sky-600 cursor-pointer">CONTACT</span>
                 </div>
-                <div className="sm:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
-                    {menuOpen ? "X" : <HamburgerIcon size="md" />}
+                <div className="md:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
+                    {menuOpen ?
+                        <div className={`transition-opacity ease-in-out ${menuOpen ? "opacity-100" : "opacity-0"}`}>
+                            <XMarkIcon />
+                        </div> :
+                        <HamburgerIcon size="md" />}
                 </div>
             </div>
             {menuOpen &&
