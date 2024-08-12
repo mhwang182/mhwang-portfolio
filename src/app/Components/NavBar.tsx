@@ -14,12 +14,32 @@ const NavBar = () => {
     const onLinkClick = (elementId: string) => {
         const element = document.getElementById(elementId);
         if (!element) {
-            router.push("/#Projects");
+            router.push(`/#${elementId}`);
             return;
         }
         element.scrollIntoView({
             behavior: "smooth"
         })
+    }
+
+    const WideNavLink = (props: { text: string, elementId: string }) => {
+        return <span
+            className="text-l hover:text-sky-700 cursor-pointer"
+            onClick={() => { onLinkClick(props.elementId) }}
+        >
+            {props.text}
+        </span>
+    }
+
+    const MobileNavLink = (props: { text: string, elementId: string }) => {
+        return <div
+            className="p-3 border-t border-black cursor-pointer hover:text-sky-700"
+            onClick={() => {
+                onLinkClick(props.elementId)
+            }}
+        >
+            {props.text}
+        </div>
     }
 
     return (
@@ -45,25 +65,10 @@ const NavBar = () => {
 
                 <div className="md:flex items-center space-x-8 hidden">
                     <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/"}>HOME</Link>
-                    <span
-                        className="text-l hover:text-sky-700 cursor-pointer"
-                        onClick={() => { onLinkClick("About") }}
-                    >
-                        ABOUT
-                    </span>
-                    <span
-                        className="text-l hover:text-sky-700 cursor-pointer"
-                        onClick={() => { onLinkClick("Projects") }}
-                    >
-                        PROJECTS
-                    </span>
+                    <WideNavLink text="ABOUT" elementId="About" />
+                    <WideNavLink text="PROJECTS" elementId="Projects" />
                     <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/resume"}>RESUME</Link>
-                    <span
-                        className="text-l hover:text-sky-700 cursor-pointer"
-                        onClick={() => { onLinkClick("Contact") }}
-                    >
-                        CONTACT
-                    </span>
+                    <WideNavLink text="CONTACT" elementId="Contact" />
                 </div>
                 <div className="md:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
                     {menuOpen ?
@@ -80,11 +85,10 @@ const NavBar = () => {
                     drop-shadow-xl
                     md:hidden
                 ">
-                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">HOME</div>
-                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">ABOUT</div>
-                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">PROJECTS</div>
+                    <MobileNavLink text="ABOUT" elementId="About" />
+                    <MobileNavLink text="PROJECTS" elementId="Projects" />
                     <Link className="p-3 border-t border-black cursor-pointer hover:text-sky-700" href={"/resume"}>RESUME</Link>
-                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">CONTACT</div>
+                    <MobileNavLink text="CONTACT" elementId="Contact" />
                 </div>
             }
 
