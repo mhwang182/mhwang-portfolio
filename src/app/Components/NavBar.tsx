@@ -4,10 +4,23 @@ import { HamburgerIcon, XMarkIcon } from "../Icons/Icons"
 import Link from "next/link";
 import headshot from "../../../public/headshot.png";
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 
 const NavBar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
+
+    const onLinkClick = (elementId: string) => {
+        const element = document.getElementById(elementId);
+        if (!element) {
+            router.push("/#Projects");
+            return;
+        }
+        element.scrollIntoView({
+            behavior: "smooth"
+        })
+    }
 
     return (
         <div className="flex flex-col fixed top-0 w-full z-20 shadow-sm">
@@ -31,11 +44,26 @@ const NavBar = () => {
                 </div>
 
                 <div className="md:flex items-center space-x-8 hidden">
-                    <span className="text-l hover:text-sky-700 cursor-pointer">HOME</span>
-                    <span className="text-l hover:text-sky-700 cursor-pointer">ABOUT</span>
-                    <span className="text-l hover:text-sky-700 cursor-pointer">PROJECTS</span>
+                    <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/"}>HOME</Link>
+                    <span
+                        className="text-l hover:text-sky-700 cursor-pointer"
+                        onClick={() => { onLinkClick("About") }}
+                    >
+                        ABOUT
+                    </span>
+                    <span
+                        className="text-l hover:text-sky-700 cursor-pointer"
+                        onClick={() => { onLinkClick("Projects") }}
+                    >
+                        PROJECTS
+                    </span>
                     <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/resume"}>RESUME</Link>
-                    <span className="text-l hover:text-sky-700 cursor-pointer">CONTACT</span>
+                    <span
+                        className="text-l hover:text-sky-700 cursor-pointer"
+                        onClick={() => { onLinkClick("Contact") }}
+                    >
+                        CONTACT
+                    </span>
                 </div>
                 <div className="md:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
                     {menuOpen ?

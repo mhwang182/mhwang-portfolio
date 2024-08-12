@@ -1,5 +1,3 @@
-import { GithubIcon } from "../Icons/Icons"
-import CommonButton from "./CommonButton"
 import ScrollToButton from "./ScrollToButton"
 import SectionContainer from "./SectionContainer"
 
@@ -27,7 +25,7 @@ const HeroSection = () => {
                     Web Applications that leads to the success of the overall product
                 </span>
                 <div className="flex space-x-5">
-                    <ScrollToButton text="Projects" elementId="ProjectsSection" />
+                    <ScrollToButton text="Projects" elementId="Projects" />
                     <button className="
                         text-white font-semibold text-l
                         px-10 py-3 rounded-full shadow-md

@@ -53,7 +53,7 @@ const AboutMeSection = () => {
 
     return (
         <BodySection>
-            <div className="
+            <div id="About" className="
                 size-full flex flex-col items-center space-y-10 bg-zinc-50 
                 py-10 px-4
                 ">
@@ -65,7 +65,7 @@ const AboutMeSection = () => {
                         I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                     </span>
                     <div className="w-fit space-x-3">
-                        <ScrollToButton text="Contact" elementId="ContactSection" />
+                        <ScrollToButton text="Contact" elementId="Contact" />
                         <Link href={"/gallery"}><CommonButton text="Check out my life :)" small /></Link>
                     </div>
                 </div>
