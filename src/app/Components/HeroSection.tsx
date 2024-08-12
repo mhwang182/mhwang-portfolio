@@ -1,24 +1,10 @@
 import { GithubIcon } from "../Icons/Icons"
 import CommonButton from "./CommonButton"
+import ScrollToButton from "./ScrollToButton"
 import SectionContainer from "./SectionContainer"
 
 const HeroSection = () => {
 
-    const OriginalContent = () => {
-        return (
-            <>
-                <span className="text-white text-7xl font-bold text-center">HEY, I'M MATT HWANG!</span>
-                <span className="text-white text-xl max-w-[600px] text-center">
-                    A Result-Oriented Web Developer building and managing Websites and
-                    Web Applications that leads to the success of the overall product
-                </span>
-                <div className="flex space-x-5">
-                    <CommonButton text="Projects" />
-                    <CommonButton text="Github" icon={GithubIcon()} />
-                </div>
-            </>
-        )
-    }
     return (
         <SectionContainer>
             <div className="
@@ -41,14 +27,7 @@ const HeroSection = () => {
                     Web Applications that leads to the success of the overall product
                 </span>
                 <div className="flex space-x-5">
-                    <button className="
-                        text-white font-semibold text-l
-                        px-10 py-3 rounded-full shadow-md
-                        bg-gradient-to-r from-indigo-700 to-cyan-400
-                        hover:brightness-90
-                    ">
-                        Projects
-                    </button>
+                    <ScrollToButton text="Projects" elementId="ProjectsSection" />
                     <button className="
                         text-white font-semibold text-l
                         px-10 py-3 rounded-full shadow-md

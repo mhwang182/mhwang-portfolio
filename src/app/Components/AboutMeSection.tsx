@@ -5,7 +5,7 @@ import ExperienceField from "./ExperienceField"
 import VTLogo from "../../../public/VTLogo.png";
 import FundriseLogo from "../../../public/FundriseLogo.png";
 import CostarLogo from "../../../public/CostarLogo.png";
-
+import ScrollToButton from "../Components/ScrollToButton";
 
 const AboutMeSection = () => {
 
@@ -50,6 +50,7 @@ const AboutMeSection = () => {
             </div>
         )
     }
+
     return (
         <BodySection>
             <div className="
@@ -64,7 +65,7 @@ const AboutMeSection = () => {
                         I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                     </span>
                     <div className="w-fit space-x-3">
-                        <CommonButton text="Contact" small />
+                        <ScrollToButton text="Contact" elementId="ContactSection" />
                         <Link href={"/gallery"}><CommonButton text="Check out my life :)" small /></Link>
                     </div>
                 </div>
