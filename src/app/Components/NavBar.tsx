@@ -23,7 +23,7 @@ const NavBar = () => {
                         />
                     </div>
                     <Link
-                        className="font-bold text-l hover:text-sky-600 cursor-pointer"
+                        className="font-bold text-l hover:text-sky-700 cursor-pointer"
                         href="/"
                     >
                         MATT HWANG
@@ -31,11 +31,11 @@ const NavBar = () => {
                 </div>
 
                 <div className="md:flex items-center space-x-8 hidden">
-                    <span className="text-l hover:text-sky-600 cursor-pointer">HOME</span>
-                    <span className="text-l hover:text-sky-600 cursor-pointer">ABOUT</span>
-                    <span className="text-l hover:text-sky-600 cursor-pointer">PROJECTS</span>
-                    <Link className="text-l hover:text-sky-600 cursor-pointer" href={"/resume"}>RESUME</Link>
-                    <span className="text-l hover:text-sky-600 cursor-pointer">CONTACT</span>
+                    <span className="text-l hover:text-sky-700 cursor-pointer">HOME</span>
+                    <span className="text-l hover:text-sky-700 cursor-pointer">ABOUT</span>
+                    <span className="text-l hover:text-sky-700 cursor-pointer">PROJECTS</span>
+                    <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/resume"}>RESUME</Link>
+                    <span className="text-l hover:text-sky-700 cursor-pointer">CONTACT</span>
                 </div>
                 <div className="md:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
                     {menuOpen ?
@@ -46,9 +46,17 @@ const NavBar = () => {
                 </div>
             </div>
             {menuOpen &&
-                <div className="w-full flex flex-col bg-zinc-50 bg-opacity-55 backdrop-blur-md border-t border-black">
-                    <div className="p-3 border-b border-black">HOME</div>
-                    <div className="p-3 border-b border-black">ABOUT</div>
+                <div className="
+                    w-full flex flex-col 
+                    bg-zinc-50 bg-opacity-55 backdrop-blur-md border-black 
+                    drop-shadow-xl
+                    md:hidden
+                ">
+                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">HOME</div>
+                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">ABOUT</div>
+                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">PROJECTS</div>
+                    <Link className="p-3 border-t border-black cursor-pointer hover:text-sky-700" href={"/resume"}>RESUME</Link>
+                    <div className="p-3 border-t border-black cursor-pointer hover:text-sky-700">CONTACT</div>
                 </div>
             }
 
