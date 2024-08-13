@@ -1,8 +1,8 @@
 import { ReactElement } from "react"
 
-const BodySectionContainer = (props: { children: ReactElement }) => {
+const BodySectionContainer = (props: { children: ReactElement, elementId: string }) => {
     return (
-        <div className="w-full h-fit">
+        <div id={props.elementId} className="w-full h-fit scroll-mt-16">
             {props.children}
         </div>
     )

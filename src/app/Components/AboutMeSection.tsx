@@ -52,8 +52,8 @@ const AboutMeSection = () => {
     }
 
     return (
-        <BodySection>
-            <div id="About" className="
+        <BodySection elementId="About">
+            <div className="
                 size-full flex flex-col items-center space-y-10 bg-zinc-50 
                 py-10 px-4
                 ">

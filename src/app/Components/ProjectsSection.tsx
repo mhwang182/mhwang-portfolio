@@ -63,8 +63,8 @@ const ProjectSection = () => {
         return <div className="w-32 rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
     }
     return (
-        <BodySectionContainer>
-            <div id="Projects" className="size-full flex flex-col space-y-10 py-10 px-4 items-center">
+        <BodySectionContainer elementId="Projects">
+            <div className="size-full flex flex-col space-y-10 py-10 px-4 items-center">
                 <span className="text-5xl font-bold">Projects</span>
                 <div className="flex flex-col space-y-10 items-center">
                     <ProjectDescription
