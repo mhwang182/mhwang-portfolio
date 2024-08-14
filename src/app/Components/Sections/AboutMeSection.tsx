@@ -1,11 +1,11 @@
 import Link from "next/link"
-import BodySection from "./BodySectionContainter"
-import CommonButton from "./CommonButton"
-import ExperienceField from "./ExperienceField"
-import VTLogo from "../../../public/VTLogo.png";
-import FundriseLogo from "../../../public/FundriseLogo.png";
-import CostarLogo from "../../../public/CostarLogo.png";
-import ScrollToButton from "../Components/ScrollToButton";
+import BodySection from "../Layout/BodySectionContainter"
+import CommonButton from "../CommonButton"
+import ExperienceField from "../ExperienceField"
+import VTLogo from "../../../../public/VTLogo.png";
+import FundriseLogo from "../../../../public/FundriseLogo.png";
+import CostarLogo from "../../../../public/CostarLogo.png";
+import ScrollToButton from "../ScrollToButton";
 
 const AboutMeSection = () => {
 

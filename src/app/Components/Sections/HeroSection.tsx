@@ -1,5 +1,5 @@
-import ScrollToButton from "./ScrollToButton"
-import SectionContainer from "./SectionContainer"
+import ScrollToButton from "../ScrollToButton"
+import SectionContainer from "../Layout/SectionContainer"
 
 const HeroSection = () => {
 

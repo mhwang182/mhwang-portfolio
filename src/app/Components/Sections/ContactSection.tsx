@@ -1,5 +1,5 @@
-import BodySectionContainer from "./BodySectionContainter"
-import CommonButton from "./CommonButton"
+import BodySectionContainer from "../Layout/BodySectionContainter"
+import CommonButton from "../CommonButton"
 
 const ContactSection = () => {
     return (
