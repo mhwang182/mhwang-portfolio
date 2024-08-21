@@ -1,6 +1,6 @@
 "use client"
 
-import { useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import CommonButton from "./CommonButton"
 import { SendEmail } from "../Utils/SendEmail"
 import { useState } from "react"
@@ -9,7 +9,13 @@ const ContactForm = () => {
 
     const [message, setMessage] = useState("");
 
-    const { register, handleSubmit } = useForm({
+    type Inputs = {
+        name: string
+        email: string
+        message: string
+    }
+
+    const { register, handleSubmit, reset } = useForm({
         defaultValues: {
             name: "",
             email: "",
@@ -17,13 +23,19 @@ const ContactForm = () => {
         }
     })
 
-
     const handleSuccess = (success: boolean) => {
         if (!success) {
-            setMessage("Unable to Send Message. Please Email mhwang.dev@gmail.com!");
+            setMessage("Unable to Send Message. Please Email mhwang.dev@gmail.com :)");
             return;
         }
+
         setMessage("Message Sent Successfully!");
+        reset();
+    }
+
+    const onSubmit: SubmitHandler<Inputs> = (data, event) => {
+        event?.preventDefault()
+        SendEmail(data, handleSuccess);
     }
 
     return (
@@ -34,10 +46,7 @@ const ContactForm = () => {
         ">
             <span className="font-bold text-xl text-blue-700">{message}</span>
             <form
-                onSubmit={handleSubmit((data) => {
-                    console.log(data)
-                    SendEmail(data, handleSuccess);
-                })}
+                onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col space-y-4"
             >
                 <div className="flex flex-col space-y-1">

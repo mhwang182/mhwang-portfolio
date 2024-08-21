@@ -1,9 +1,6 @@
 const SendEmail = async (data: any, handleSuccess: (success: boolean) => void) => {
 
-
-    console.log(process.env.NEXT_PUBLIC_EMAIL_ACCESS_KEY);
-
-    data["access_key"] = process.env.NEXT_PUBLIC_EMAIL_ACCESS_KEY;
+    data["access_key"] = process.env.EMAIL_ACCESS_KEY;
 
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -16,11 +13,9 @@ const SendEmail = async (data: any, handleSuccess: (success: boolean) => void) =
         })
 
         const responseData = await response.json();
-        console.log(responseData);
         handleSuccess(responseData.success)
 
     } catch (error) {
-        console.log(error)
         handleSuccess(false)
     }
 
