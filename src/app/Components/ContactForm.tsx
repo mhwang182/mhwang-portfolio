@@ -17,9 +17,10 @@ const ContactForm = () => {
         }
     })
 
+
     const handleSuccess = (success: boolean) => {
         if (!success) {
-            setMessage("Unable to Send Message");
+            setMessage("Unable to Send Message. Please Email mhwang.dev@gmail.com!");
             return;
         }
         setMessage("Message Sent Successfully!");

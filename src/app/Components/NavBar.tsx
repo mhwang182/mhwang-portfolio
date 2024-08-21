@@ -22,24 +22,41 @@ const NavBar = () => {
         })
     }
 
-    const WideNavLink = (props: { text: string, elementId: string }) => {
-        return <span
-            className="text-l hover:text-sky-700 cursor-pointer"
-            onClick={() => { onLinkClick(props.elementId) }}
-        >
-            {props.text}
-        </span>
+    const WideNavLink = (props: { text: string, elementId?: string, href?: string }) => {
+        return props.elementId ?
+            <span
+                className="text-l hover:text-blue-700 cursor-pointer"
+                onClick={() => {
+                    if (props.elementId) { onLinkClick(props.elementId) }
+                }}
+            >
+                {props.text}
+            </span> :
+            <Link
+                className="text-l hover:text-blue-700 cursor-pointer"
+                href={props.href || ""}
+            >
+                {props.text}
+            </Link>
+
     }
 
-    const MobileNavLink = (props: { text: string, elementId: string }) => {
-        return <div
-            className="p-3 border-t border-black cursor-pointer hover:text-sky-700"
-            onClick={() => {
-                onLinkClick(props.elementId)
-            }}
-        >
-            {props.text}
-        </div>
+    const MobileNavLink = (props: { text: string, elementId?: string, href?: string }) => {
+        return props.elementId ?
+            <div
+                className="p-3 border-t border-black cursor-pointer hover:text-blue-700"
+                onClick={() => {
+                    if (props.elementId) { onLinkClick(props.elementId) }
+                }}
+            >
+                {props.text}
+            </div> :
+            <Link
+                className="p-3 border-t border-black cursor-pointer hover:text-blue-700"
+                href={props.href || ""}
+            >
+                {props.text}
+            </Link>
     }
 
     return (
@@ -56,7 +73,7 @@ const NavBar = () => {
                         />
                     </div>
                     <Link
-                        className="font-bold text-l hover:text-sky-700 cursor-pointer"
+                        className="font-bold text-l hover:text-blue-700 cursor-pointer"
                         href="/"
                     >
                         MATT HWANG
@@ -64,10 +81,10 @@ const NavBar = () => {
                 </div>
 
                 <div className="md:flex items-center space-x-8 hidden">
-                    <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/"}>HOME</Link>
+                    <WideNavLink text={"HOME"} href="/" />
                     <WideNavLink text="ABOUT" elementId="About" />
                     <WideNavLink text="PROJECTS" elementId="Projects" />
-                    <Link className="text-l hover:text-sky-700 cursor-pointer" href={"/resume"}>RESUME</Link>
+                    <WideNavLink text="RESUME" href="/resume" />
                     <WideNavLink text="CONTACT" elementId="Contact" />
                 </div>
                 <div className="md:hidden flex items-center cursor-pointer" onClick={() => { setMenuOpen(!menuOpen) }}>
@@ -87,7 +104,7 @@ const NavBar = () => {
                 ">
                     <MobileNavLink text="ABOUT" elementId="About" />
                     <MobileNavLink text="PROJECTS" elementId="Projects" />
-                    <Link className="p-3 border-t border-black cursor-pointer hover:text-sky-700" href={"/resume"}>RESUME</Link>
+                    <MobileNavLink text="RESUME" href="/resume" />
                     <MobileNavLink text="CONTACT" elementId="Contact" />
                 </div>
             }
