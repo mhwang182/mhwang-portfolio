@@ -61,6 +61,14 @@ const ProjectSection = () => {
     const Divider = () => {
         return <div className="w-32 rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
     }
+
+    const DESCRIPTION_1 = `OzempicResults.com is a Fullstack web app built using React and Flask with MongoDB, 
+    enabling multiple users to share and view image posts showcasing their progress with weight loss medications like Ozempic.`
+
+    const DESCRIPTION_2 = `My humble portfolio website :)`;
+
+    const DESCRIPTOIN_3 = `App focused on helping aws learners and professionals obtain clarity for their goals`;
+
     return (
         <BodySectionContainer elementId="Projects">
             <div className="size-full flex flex-col space-y-10 py-10 px-4 items-center">
@@ -74,8 +82,7 @@ const ProjectSection = () => {
                             { name: "Flask", icon: <PythonIcon /> },
                             { name: "MongoDB", icon: <MongoDBIcon /> }
                         ]}
-                        description="OzempicResults.com is a Fullstack web app built using React and Flask, that users can
-                            find weighloss results achieved using medications like Ozempic."
+                        description={DESCRIPTION_1}
                         repoLink="test"
                         demoLink="test"
                     />
@@ -86,7 +93,7 @@ const ProjectSection = () => {
                         toolsList={[
                             { name: "React", icon: <ReactIcon /> }
                         ]}
-                        description="My humble portfolio website :)"
+                        description={DESCRIPTION_2}
                         repoLink="test"
                         demoLink="test"
                     />
@@ -95,7 +102,7 @@ const ProjectSection = () => {
                         name={"AWS Focused Application (WIP)"}
                         image={WorkInProgressImage}
                         toolsList={[]}
-                        description="App focused on helping aws learners and professionals obtain clarity for their goals"
+                        description={DESCRIPTOIN_3}
                     />
                     <Divider />
                 </div>
