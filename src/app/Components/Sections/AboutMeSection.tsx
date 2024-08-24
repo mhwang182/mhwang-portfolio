@@ -65,9 +65,8 @@ const AboutMeSection = () => {
                         with a passion for developing high quality software and solving the problems that lead to the success of any project.
                     </span>
                     <span className="text-lg">
-                        I'm a Virginia native from the surrounding Washington, DC area, but have also spent some time residing in NYC.
+                        I'm a Virginia native from the surrounding Washington, DC area, but have also spent some time residing in NYC!
                         I love traveling the world and getting to experience new places and making meaningful connections.
-                        Helping others is important to me whether thats getting involved in volunteering or helping a friend in need.
                     </span>
                     <span className="text-lg">
                         I'm looking for my next opportunity, feel free to reach out if you know about any open positions!
