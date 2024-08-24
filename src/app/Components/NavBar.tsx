@@ -25,18 +25,18 @@ const NavBar = () => {
     const WideNavLink = (props: { text: string, elementId?: string, href?: string }) => {
         return props.elementId ?
             <span
-                className="text-l hover:text-blue-700 cursor-pointer"
+                className="text-l hover:text-blue-700 cursor-pointer h-full flex items-center"
                 onClick={() => {
                     if (props.elementId) { onLinkClick(props.elementId) }
                 }}
             >
-                {props.text}
+                <span className="">{props.text}</span>
             </span> :
             <Link
-                className="text-l hover:text-blue-700 cursor-pointer"
+                className="text-l hover:text-blue-700 cursor-pointer h-full flex items-center"
                 href={props.href || ""}
             >
-                {props.text}
+                <span>{props.text}</span>
             </Link>
 
     }
@@ -46,7 +46,10 @@ const NavBar = () => {
             <div
                 className="p-3 border-t border-black cursor-pointer hover:text-blue-700"
                 onClick={() => {
-                    if (props.elementId) { onLinkClick(props.elementId) }
+                    if (props.elementId) {
+                        setMenuOpen(false);
+                        onLinkClick(props.elementId);
+                    }
                 }}
             >
                 {props.text}
@@ -54,6 +57,7 @@ const NavBar = () => {
             <Link
                 className="p-3 border-t border-black cursor-pointer hover:text-blue-700"
                 href={props.href || ""}
+                onClick={() => { setMenuOpen(false) }}
             >
                 {props.text}
             </Link>
