@@ -60,9 +60,17 @@ const AboutMeSection = () => {
                 <div className="flex flex-col space-y-8 mx-auto max-w-[1000px]">
                     <span className="text-5xl font-bold">{"About Me"}</span>
                     <span className="text-lg">
-                        I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
-                        I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming
-                        I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+                        I'm a dedicated and Full Stack Developer with a Bachelor’s degree in Computer Science from Virginia Tech and extensive experience in the IT industry.
+                        I have experience in a wide range of programming languages and programming tools,
+                        with a passion for developing high quality software and solving the problems that lead to the success of any project.
+                    </span>
+                    <span className="text-lg">
+                        I'm a Virginia native from the surrounding Washington, DC area, but have also spent some time residing in NYC.
+                        I love traveling the world and getting to experience new places and making meaningful connections.
+                        Helping others is important to me whether thats getting involved in volunteering or helping a friend in need.
+                    </span>
+                    <span className="text-lg">
+                        I'm looking for my next opportunity, feel free to reach out if you know about any open positions!
                     </span>
                     <div className="w-fit space-x-3">
                         <ScrollToButton text="Contact" elementId="Contact" />

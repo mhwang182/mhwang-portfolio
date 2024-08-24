@@ -19,10 +19,10 @@ const HeroSection = () => {
                 </div>
                 <span className="
                     max-w-[600px]
-                    text-gray-300 text-xl
+                    text-white text-xl font-semibold
                 ">
-                    A Result-Oriented Web Developer building and managing Websites and
-                    Web Applications that leads to the success of the overall product
+                    An experienced Software Engineer adept at using diverse tech stacks to build
+                    effective solutions for the organizations I'm apart of
                 </span>
                 <div className="flex space-x-5">
                     <ScrollToButton text="Projects" elementId="Projects" />
