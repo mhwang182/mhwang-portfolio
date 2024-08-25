@@ -1,11 +1,8 @@
-import { ReactElement } from "react"
 import BodySectionContainer from "../Layout/BodySectionContainter"
 import { MongoDBIcon, PythonIcon, ReactIcon } from "../../Icons/Icons"
 import OzempicResultsImage from "../../../../public/OzempicResultsImage.png";
 import WorkInProgressImage from "../../../../public/WorkInProgressImage.jpeg";
 import PortfolioSiteImage from "../../../../public/PortfolioSiteImage.png";
-import Image, { StaticImageData } from 'next/image'
-import CommonButton from "../CommonButton";
 import ProjectDescription from "../Content/ProjectDescription";
 
 const ProjectSection = () => {
