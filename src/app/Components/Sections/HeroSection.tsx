@@ -19,8 +19,10 @@ const HeroSection = () => {
                 </div>
                 <span className="
                     max-w-[600px]
-                    text-white text-xl font-semibold
-                ">
+                    text-gray-200 text-xl font-semibold
+                "
+                    style={{ textShadow: "1px 1px 4px black" }}
+                >
                     An experienced Software Engineer adept at using diverse tech stacks to build
                     effective solutions for the organizations I'm apart of
                 </span>
