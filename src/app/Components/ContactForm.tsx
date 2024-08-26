@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import CommonButton from "./CommonButton"
 import { SendEmail } from "../Utils/SendEmail"
 import { useState } from "react"
+import Link from "next/link"
 
 const ContactForm = () => {
 
@@ -69,8 +70,25 @@ const ContactForm = () => {
                         {...register("message", { required: true })}
                     ></textarea>
                 </div>
-                <div className="w-fit">
-                    <CommonButton small text="Submit" />
+                <div className="flex gap-3 flex-wrap">
+                    <div className="w-fit">
+                        <CommonButton small text="Submit" />
+                    </div>
+                    <div className="w-fit">
+                        <Link href={"https://www.linkedin.com/in/matthew-hwang-26819a127"} rel="noopener noreferrer" target="_blank">
+                            <div
+                                className="
+                                    text-md
+                                    rounded-full shadow-md hover:brightness-90
+                                    bg-gradient-to-r from-blue-700 to-cyan-400
+                                    px-5 py-2
+                                    text-white font-semibold
+                                "
+                            >
+                                {"Message me on LinkedIn!"}
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </form>
         </div>)

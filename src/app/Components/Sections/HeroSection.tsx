@@ -1,5 +1,6 @@
 import ScrollToButton from "../ScrollToButton"
 import SectionContainer from "../Layout/SectionContainer"
+import Link from "next/link"
 
 const HeroSection = () => {
 
@@ -28,14 +29,29 @@ const HeroSection = () => {
                 </span>
                 <div className="flex space-x-5">
                     <ScrollToButton text="Projects" elementId="Projects" />
-                    <button className="
-                        text-white font-semibold text-l
-                        px-10 py-3 rounded-full shadow-md
-                        bg-gradient-to-r from-indigo-700 to-cyan-400
-                        hover:brightness-90
-                    ">
-                        <span>Github</span>
-                    </button>
+
+                    <Link href={"https://github.com/mhwang182"} rel="noopener noreferrer" target="_blank">
+                        <button className="
+                            text-white font-semibold text-l
+                            px-10 py-3 rounded-full shadow-md
+                            bg-gradient-to-r from-indigo-700 to-cyan-400
+                            hover:brightness-90
+                        ">
+                            <span>Github</span>
+                        </button>
+                    </Link>
+                </div>
+                <div className="flex space-x-5">
+                    <Link href={"https://www.linkedin.com/in/matthew-hwang-26819a127"} rel="noopener noreferrer" target="_blank">
+                        <button className="
+                            text-white font-semibold text-l
+                            px-6 py-3 rounded-full shadow-md
+                            bg-gradient-to-r from-indigo-700 to-cyan-400
+                            hover:brightness-90
+                        ">
+                            <span>LinkedIn</span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </SectionContainer>
