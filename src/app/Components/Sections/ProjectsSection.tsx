@@ -40,11 +40,11 @@ const ProjectSection = () => {
                         name={"Portfolio Website"}
                         image={PortfolioSiteImage}
                         toolsList={[
-                            { name: "React", icon: <ReactIcon /> }
+                            { name: "React", icon: <ReactIcon /> },
+                            { name: "Next.js" }
                         ]}
                         description={DESCRIPTION_2}
-                        repoLink="test"
-                        demoLink="test"
+                        repoLink="https://github.com/mhwang182/mhwang-portfolio"
                     />
                     <Divider />
                     <ProjectDescription
