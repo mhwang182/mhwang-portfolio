@@ -26,7 +26,7 @@ const Gallery = () => {
             height: 400
         },
         {
-            src: "/headshot.png",
+            src: "/headshot.jpg",
             width: 400,
             height: 400
         },

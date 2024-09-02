@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { HamburgerIcon, XMarkIcon } from "../Icons/Icons"
 import Link from "next/link";
-import headshot from "../../../public/headshot.png";
+import headshot from "../../../public/headshot.jpg";
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
 
