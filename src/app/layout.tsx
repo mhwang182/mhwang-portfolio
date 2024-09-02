@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Libre_Franklin } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
 import NavBar from "./Components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const libre_franklin = Libre_Franklin({
+const libre_franklin = Raleway({
   subsets: ['latin'],
-  display: 'swap',
+  weight: "variable"
 })
 
 export const metadata: Metadata = {

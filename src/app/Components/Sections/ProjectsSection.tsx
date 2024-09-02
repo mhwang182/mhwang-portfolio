@@ -16,13 +16,13 @@ const ProjectSection = () => {
 
     const DESCRIPTION_2 = `My humble portfolio website :)`;
 
-    const DESCRIPTOIN_3 = `App focused on helping aws learners and professionals obtain clarity for their goals`;
+    const DESCRIPTOIN_3 = `App focused on helping job seekers decide which version of their resume to submit to job applications.`;
 
     return (
         <BodySectionContainer elementId="Projects">
             <div className="size-full flex flex-col space-y-10 py-10 px-4 items-center">
                 <span className="text-5xl font-bold">Projects</span>
-                <div className="flex flex-col space-y-10 items-center">
+                <div className="flex flex-col space-y-10 items-center max-w-[500px] md:max-w-full">
                     <ProjectDescription
                         name={"OzempicResults.com"}
                         image={OzempicResultsImage}
@@ -48,7 +48,7 @@ const ProjectSection = () => {
                     />
                     <Divider />
                     <ProjectDescription
-                        name={"AWS Focused Application (WIP)"}
+                        name={"Resume Analysis Application (WIP)"}
                         image={WorkInProgressImage}
                         toolsList={[]}
                         description={DESCRIPTOIN_3}

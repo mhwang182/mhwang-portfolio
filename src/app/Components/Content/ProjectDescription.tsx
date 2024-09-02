@@ -43,7 +43,7 @@ const ProjectDescription = (props: {
                         </div>
                     </>}
                 </div>
-                <span>{props.description}</span>
+                <span className="">{props.description}</span>
                 <div className="flex space-x-2">
                     {props.demoLink &&
                         <Link href={props.demoLink} rel="noopener noreferrer" target="_blank">

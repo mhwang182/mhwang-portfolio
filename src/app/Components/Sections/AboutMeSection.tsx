@@ -13,9 +13,9 @@ const AboutMeSection = () => {
                 ">
                 <BioSection />
                 <div className="w-full max-w-[800px] rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
-                <div className="w-full max-w-[1000px]">
-                    <span className="text-xl font-semibold">My Background:</span>
-                    <div className="flex w-full flex-wrap gap-y-4 gap-x-4 justify-center mt-5">
+                <div className="w-full max-w-[1000px] flex flex-col items-center">
+                    <span className="text-xl font-semibold w-full">My Background:</span>
+                    <div className="flex w-full flex-wrap gap-y-4 gap-x-4 justify-center mt-5 max-w-[500px] md:max-w-full">
                         <SkillsSection />
                         <ExperienceSection />
                     </div>

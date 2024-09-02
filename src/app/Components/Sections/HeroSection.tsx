@@ -25,7 +25,7 @@ const HeroSection = () => {
                     style={{ textShadow: "1px 1px 4px black" }}
                 >
                     An experienced Software Engineer adept at using diverse tech stacks to build
-                    effective solutions for the organizations I'm apart of
+                    effective solutions for any environment
                 </span>
                 <div className="flex space-x-5">
                     <ScrollToButton text="Projects" elementId="Projects" />
