@@ -11,7 +11,7 @@ const HeroSection = () => {
                 size-full flex flex-col justify-center
                 px-10 space-y-5">
                 <div className="flex flex-col">
-                    <span className="text-gray-400 text-7xl font-extrabold">HEY, I'M</span>
+                    <span className="text-gray-400 text-7xl font-extrabold">HEY, I&apos;M</span>
                     <span className="
                         w-fit
                         text-7xl font-extrabold
