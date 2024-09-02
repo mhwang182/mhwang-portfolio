@@ -9,7 +9,7 @@ const AboutMeSection = () => {
         <BodySection elementId="About">
             <div className="
                 size-full flex flex-col items-center space-y-10 bg-zinc-50 
-                py-10 px-4
+                py-10 px-4 md:px-8
                 ">
                 <BioSection />
                 <div className="w-full max-w-[800px] rounded-full h-1 bg-gradient-to-r from-blue-700 to-cyan-400" />
