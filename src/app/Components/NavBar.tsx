@@ -67,7 +67,7 @@ const NavBar = () => {
         <div className="flex flex-col fixed top-0 w-full z-20 shadow-sm">
             <div className="h-16 bg-zinc-50 bg-opacity-55 backdrop-blur-md flex justify-between px-10">
                 <div className="flex items-center space-x-3 min-w-fit">
-                    <div className="bg-sky-600 rounded-full size-12 overflow-hidden">
+                    <div className="rounded-full size-12 overflow-hidden">
                         <Image
                             src={headshot}
                             alt=""
