@@ -36,7 +36,7 @@ const ProjectDescription = (props: {
                 <span className="text-3xl font-bold">{props.name}</span>
                 <div>
                     {props.toolsList.length > 0 && <>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 flex-wrap justify-center sm:justify-start">
                             {props.toolsList.map((toolInfo, index) => {
                                 return <PillIcon key={index} name={toolInfo.name} icon={toolInfo.icon} />
                             })}
