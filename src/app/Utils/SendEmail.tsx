@@ -1,5 +1,10 @@
 const SendEmail = async (data: any, handleSuccess: (success: boolean) => void) => {
 
+
+    if (!process.env.EMAIL_ACCESS_KEY) {
+        console.log("No access key");
+    }
+
     data["access_key"] = process.env.EMAIL_ACCESS_KEY;
 
     try {
