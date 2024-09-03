@@ -4,7 +4,7 @@ const SkillsSection = () => {
         "Java", "Javascript", "Typescript", "SpringBoot",
         "ReactJS", "NextJS", "NodeJS", "AWS", "SQL",
         "Hibernate", "MongoDB", "Python", "Flask",
-        "Docker"
+        "Docker", "Agile/Scrum", "Cross Team Collaboration"
     ]
 
     return (

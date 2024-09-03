@@ -8,9 +8,12 @@ const BioSection = () => {
             <span className="text-5xl font-bold">{"About Me"}</span>
             <span className="text-lg">
                 I&apos;m a dedicated and Full Stack Developer with a Bachelor&apos;s degree in Computer Science from Virginia Tech and extensive experience in the IT industry.
-                I have experience in a wide range of programming languages and programming tools,
+                I have experience in a wide range of programming languages and development tools,
                 with a passion for developing high quality software and solving problems that lead to the success of any project.
-                I&apos;m always looking for opportunities to learn new skills and grow as an engineer.
+            </span>
+            <span className="text-lg">
+                I have experience in Agile and Scrum development environments and a desire to learn new skills and take initiative on
+                exciting challenges.
             </span>
             <span className="text-lg">
                 I&apos;m a Virginia native from the surrounding Washington DC area, but have also spent some time residing in NYC!
