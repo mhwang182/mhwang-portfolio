@@ -12,7 +12,6 @@ const Footer = () => {
                 <span className="font-bold text-2xl mb-2">SOCIALS</span>
                 <Link href={"https://www.linkedin.com/in/matthew-hwang-26819a127"} rel="noopener noreferrer" target="_blank">LinkedIn</Link>
                 <Link href={"https://github.com/mhwang182"} rel="noopener noreferrer" target="_blank">GitHub</Link>
-                <Link href={"https://www.instagram.com/matt.hwang182"} rel="noopener noreferrer" target="_blank">Instagram</Link>
             </div>
         </div>
         <br />
