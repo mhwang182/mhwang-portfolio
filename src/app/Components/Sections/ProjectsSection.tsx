@@ -45,7 +45,8 @@ const ProjectSection = () => {
                         image={PortfolioSiteImage}
                         toolsList={[
                             { name: "React", icon: <ReactIcon /> },
-                            { name: "Next.js" }
+                            { name: "Next.js" },
+                            { name: "TailwindCSS" }
                         ]}
                         description={DESCRIPTION_2}
                         repoLink="https://github.com/mhwang182/mhwang-portfolio"
