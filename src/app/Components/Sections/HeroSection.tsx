@@ -1,15 +1,17 @@
 import ScrollToButton from "../ScrollToButton"
 import SectionContainer from "../Layout/SectionContainer"
 import Link from "next/link"
+import Image from "next/image"
+import GalleryImage3 from "../../../../public/GalleryImage3.jpg"
+import headshot from "../../../../public/headshot.jpeg"
+import StepsImage from "../../../../public/StepsImage.jpg"
+
 
 const HeroSection = () => {
 
-    return (
-        <SectionContainer>
-            <div className="
-                bg-[url('../../public/cityBackground.jpeg')] 
-                size-full flex flex-col justify-center
-                px-10 space-y-5">
+    const LeftSide = () => {
+        return (
+            <div className="flex flex-col space-y-5 ">
                 <div className="flex flex-col">
                     <span className="text-gray-400 text-7xl font-extrabold">HEY, I&apos;M</span>
                     <span className="
@@ -52,6 +54,66 @@ const HeroSection = () => {
                             <span>LinkedIn</span>
                         </button>
                     </Link>
+                </div>
+            </div>)
+    }
+
+    const RightSide = () => {
+        return (
+            <div className="
+                    hidden
+                    w-fit h-full 
+                    md:flex items-center
+                ">
+                <div className="relative w-[450px] md:w-[550px] h-[500px]">
+                    <div className="absolute">
+                        <div className="w-80 h-56 rounded-lg overflow-hidden shadow-xl">
+                            <Image
+                                src={GalleryImage3} alt=""
+                                height={0}
+                                width={0}
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="absolute top-36 left-64">
+                        <div className="size-52 rounded-lg overflow-hidden shadow-xl">
+                            <Image
+                                src={headshot} alt=""
+                                height={0}
+                                width={0}
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute top-72 left-20">
+                        <div className="h-68 w-52 rounded-lg overflow-hidden shadow-xl">
+                            <Image
+                                src={StepsImage} alt=""
+                                height={0}
+                                width={0}
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <SectionContainer>
+            <div className="
+                bg-[url('../../public/cityBackground.jpeg')] 
+                size-full
+                px-10">
+                <div className="
+                    size-full max-w-[1600px] mx-auto
+                    flex items-center justify-between space-x-12
+                ">
+                    <LeftSide />
+                    <RightSide />
                 </div>
             </div>
         </SectionContainer>
