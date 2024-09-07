@@ -71,7 +71,7 @@ const HeroSection = () => {
         <SectionContainer>
             <div className="
                 bg-[url('../../public/cityBackground.jpeg')] 
-                size-full
+                size-full overflow-hidden
                 px-10">
                 <div className="
                     size-full max-w-[1600px] mx-auto
