@@ -7,7 +7,7 @@ const BioSection = () => {
         <div className="flex flex-col space-y-8 mx-auto max-w-[1000px]">
             <span className="text-5xl font-bold">{"About Me"}</span>
             <span className="text-lg">
-                I&apos;m a dedicated and Full Stack Developer with a Bachelor&apos;s degree in Computer Science from Virginia Tech and extensive experience in the IT industry.
+                I&apos;m a dedicated Full Stack Developer with a Bachelor&apos;s degree in Computer Science from Virginia Tech and extensive experience in the IT industry.
                 I have experience in a wide range of programming languages and development tools,
                 with a passion for developing high quality software and solving problems that lead to the success of any project.
             </span>
