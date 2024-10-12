@@ -18,12 +18,12 @@ const ExperienceSection = () => {
                 <span className="font-bold text-2xl">Work Experience: </span>
                 <ExperienceField
                     institution="Fundrise"
-                    details="Software Engineer II (Dec 2021 - Aug 2023)"
+                    details="Software Engineer II"
                     image={FundriseLogo}
                 />
                 <ExperienceField
                     institution="Costar Group"
-                    details="Software Engineer (Aug 2020 - Dec 2021)"
+                    details="Software Engineer"
                     image={CostarLogo}
                 />
             </div>
