@@ -1,9 +1,9 @@
 import BodySectionContainer from "../Layout/BodySectionContainter"
 import { MongoDBIcon, PythonIcon, ReactIcon } from "../../Icons/Icons"
 import OzempicResultsImage from "../../../../public/OzempicResultsImage.png";
-import WorkInProgressImage from "../../../../public/WorkInProgressImage.jpeg";
 import PortfolioSiteImage from "../../../../public/PortfolioSiteImage.png";
 import ProjectDescription from "../Content/ProjectDescription";
+import ResumeMatchImage from "../../../../public/ResumeMatch.png";
 
 const ProjectSection = () => {
 
@@ -54,8 +54,12 @@ const ProjectSection = () => {
                     <Divider />
                     <ProjectDescription
                         name={"Resume Analysis Application (WIP)"}
-                        image={WorkInProgressImage}
-                        toolsList={[]}
+                        image={ResumeMatchImage}
+                        toolsList={[
+                            { name: "Angular" },
+                            { name: "HonoJS" },
+                            { name: "Drizzle ORM" }
+                        ]}
                         description={DESCRIPTOIN_3}
                         repoLink="https://github.com/mhwang182/ResuMatch"
                         demoLink="https://resumatch.pages.dev/"
