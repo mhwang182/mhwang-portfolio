@@ -57,6 +57,8 @@ const ProjectSection = () => {
                         image={WorkInProgressImage}
                         toolsList={[]}
                         description={DESCRIPTOIN_3}
+                        repoLink="https://github.com/mhwang182/ResuMatch"
+                        demoLink="https://resumatch.pages.dev/"
                     />
                     <Divider />
                 </div>
