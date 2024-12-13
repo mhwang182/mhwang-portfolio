@@ -53,7 +53,7 @@ const ProjectSection = () => {
                     />
                     <Divider />
                     <ProjectDescription
-                        name={"Resume Analysis Application (WIP)"}
+                        name={"Resume Analysis Application"}
                         image={ResumeMatchImage}
                         toolsList={[
                             { name: "Angular" },
